@@ -11,17 +11,20 @@ def line(line)
 end
 
 def take_a_number(line, customer)
+  new_line = []
   if line.length === 0
     puts "Welcome, #{customer}. You are number 1 in line"
   else
-    puts "Welcome, "
+    puts "Welcome, #{customer}. You are number #{line.length + 1} in line."
+    new_line.push(customer)
+  end
 end
 
 def now_serving(line)
-  if line.length < 1 
-    "The line is empty."
+  if line.length < 1
+    puts "There is nobody waiting to be served!"
   else
     customer = line[0]
-    line = line.shift
-  end
+    line.shift
+    puts "Currently serving #{customer}."
 end
