@@ -27,4 +27,5 @@ def now_serving(line)
     customer = line[0]
     line.shift
     puts "Currently serving #{customer}."
+  end
 end
